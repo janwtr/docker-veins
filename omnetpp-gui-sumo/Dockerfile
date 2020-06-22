@@ -6,7 +6,7 @@ MAINTAINER Jan W <jan@ums.ac.id>
 
 RUN apt-get update -y && \
 	apt-get install -y --no-install-recommends \			
-	cmake python g++ libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev libgl2ps-dev swig \
+	cmake python g++ libxerces-c-dev libfox-1.6-dev libgdal-dev libproj-dev libgl2ps-dev swig
 
 ARG VERSION=1.2.0
 
