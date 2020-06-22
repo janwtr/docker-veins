@@ -22,6 +22,6 @@ RUN tar xzf sumo-src-$VERSION.tar.gz && \
 RUN cd /root/sumo-$VERSION && \
 	export SUMO_HOME="\root\sumo-$VERSION" && \
 	mkdir sumo/build/cmake-build && \
-	cd sumo/build/cmake-build && \
+	cd sumo-$VERSION/build/cmake-build && \
 	cmake ../.. && \
 	make -j$(nproc)
