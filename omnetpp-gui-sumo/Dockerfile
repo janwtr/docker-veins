@@ -19,7 +19,7 @@ RUN tar xzf sumo-src-$VERSION.tar.gz && \
     rm sumo-src-$VERSION.tar.gz
 
 # Configure and build from source.
-RUN cd \root\sumo-$VERSION && \
+RUN cd /root/sumo-$VERSION && \
 	export SUMO_HOME="\root\sumo-$VERSION" && \
 	mkdir sumo/build/cmake-build && \
 	cd sumo/build/cmake-build && \
