@@ -1,2 +1,2 @@
 # omnetp
-Diturunkan dari janwtr/omnetpp-gui-sumo dengan ditambahkan modul veins 5.0
+Diturunkan dari janwtr/omnetpp-gui-sumo dan ditambahkan modul veins 5.0

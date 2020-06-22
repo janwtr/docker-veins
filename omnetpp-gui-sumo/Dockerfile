@@ -2,7 +2,7 @@
 #
 
 FROM janwtr/omnetpp-gui:latest as base
-MAINTAINER Jan W <jan@ums.ac.id>
+LABEL maintainer="jan@ums.ac.id"
 
 RUN apt-get update -y && \
 	apt-get install -y --no-install-recommends \			

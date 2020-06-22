@@ -2,9 +2,11 @@
 #
 
 FROM omnetpp/omnetpp-base:u18.04 as base
-MAINTAINER Jan W <jan@ums.ac.id>
-RUN apt-get update -y && apt-get install -y --no-install-recommends qt5-default libqt5opengl5-dev \
-            libgtk-3-0 libwebkitgtk-3.0-0 default-jre gcc g++ gdb libxml2-dev
+LABEL maintainer="jan@ums.ac.id"
+
+RUN apt-get update -y && \
+    apt-get install -y --no-install-recommends \
+    qt5-default libqt5opengl5-dev libgtk-3-0 libwebkitgtk-3.0-0 default-jre gcc g++ gdb libxml2-dev
 
 # first stage - build OMNeT++ with GUI
 FROM base as builder
@@ -17,6 +19,7 @@ RUN wget https://github.com/omnetpp/omnetpp/releases/download/omnetpp-$VERSION/o
 RUN mv omnetpp-$VERSION omnetpp
 WORKDIR /root/omnetpp
 ENV PATH /root/omnetpp/bin:$PATH
+
 # remove unused files and build
 RUN ./configure WITH_OSG=no WITH_OSGEARTH=no && \
     make -j $(nproc) MODE=debug base && make -j $(nproc) MODE=release base && \

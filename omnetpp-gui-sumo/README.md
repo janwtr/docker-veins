@@ -1,2 +1,2 @@
 # omnetpp-gui-sumo
-Diturunkan dari janwtr/omnetpp-gui dengan ditambahkan SUMO 1.2.0
+Diturunkan dari janwtr/omnetpp-gui dan ditambahkan dengan SUMO 1.2.0
