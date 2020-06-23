@@ -13,10 +13,8 @@ RUN apt-get update -y && \
 
 ARG VERSION=5.0
 
-WORKDIR /root/models
+WORKDIR /root
 
 ADD sumo-launchd.py .
 ADD run-sumo.sh .
 RUN chmod +x run-sumo.sh
-
-VOLUME /root/models/veins
