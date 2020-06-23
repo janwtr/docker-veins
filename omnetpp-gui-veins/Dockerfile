@@ -15,7 +15,8 @@ ARG VERSION=5.0
 
 WORKDIR /root/models
 
-RUN wget https://github.com/sommer/veins/archive/veins-$VERSION.tar.gz && \
-	tar xzf veins-$VERSION.tar.gz && \
-	mv veins-$VERSION veins && \
-    rm veins-$VERSION.tar.gz
+ADD sumo-launchd.py .
+ADD run-sumo.sh .
+RUN chmod +x run-sumo.sh
+
+VOLUME /root/models/veins
